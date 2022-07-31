@@ -2,6 +2,7 @@
  * @param {string} s
  * @return {number}
  */
+ var output = 0;
  var romanToInt = function(s) {
     romanNumMap = {
         "I": 1,
@@ -12,7 +13,7 @@
         "D": 500,
         "M": 1000            
     }
-    var output = 0;
+   
     for(i = 0; i < s.length; i++){
         if(s.charAt(i) == "I" && s.charAt(i+1) == "V"){
                 output += 4
@@ -40,5 +41,6 @@
             }
         else output += romanNumMap[s.charAt(i)]
     }
+    
     return output
 };
