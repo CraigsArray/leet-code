@@ -12,8 +12,7 @@
         "C": 100,
         "D": 500,
         "M": 1000            
-    }
-   
+    } 
     for(i = 0; i < s.length; i++){
         if(s.charAt(i) == "I" && s.charAt(i+1) == "V"){
                 output += 4
@@ -40,7 +39,6 @@
                 i++
             }
         else output += romanNumMap[s.charAt(i)]
-    }
-    
+    }   
     return output
 };
