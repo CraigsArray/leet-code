@@ -1,17 +1,24 @@
-var mergeTwoLists = function(l1, l2) {
-    var mergedHead = { val : -1, next : null },
-        crt = mergedHead;
-    while(l1 && l2) {
-        if(l1.val > l2.val) {
-            crt.next = l2;
-            l2 = l2.next;
+var mergeTwoLists = function(list1, list2) {
+    let curr = new ListNode();
+    let newlistHead = curr;
+    while(list1 !== null && list2 !== null) {
+        if(list1.val > list2.val) { //take the smaller node
+            curr.next = list2;
+            list2 = list2.next;
         } else {
-            crt.next = l1;
-            l1 = l1.next;
+            curr.next = list1;
+            list1 = list1.next;
         }
-        crt = crt.next;
+        curr = curr.next; //update current node in new list
     }
-    crt.next = l1 || l2;
+    if(list1 !== null){
+        curr.next = list1;
+        list1 = list1.next;
+    }
+    if(list2 !== null){
+        curr.next = list2;
+        list2 = list2.next;
+    }
     
-    return mergedHead.next;
+    return newlistHead.next;
 };
