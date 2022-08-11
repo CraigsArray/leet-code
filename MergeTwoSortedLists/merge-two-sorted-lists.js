@@ -19,6 +19,5 @@ var mergeTwoLists = function(list1, list2) {
         curr.next = list2;
         list2 = list2.next;
     }
-    
     return newlistHead.next; //Return entire list from the beginning.
 };
