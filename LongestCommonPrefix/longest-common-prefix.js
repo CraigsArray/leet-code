@@ -5,7 +5,7 @@ var longestCommonPrefix = function(strs) {
     const matchStrings = function(str1, str2){
         let matched = "";
         let counter = 0;
-        while(counter < str1.length || counter < str2.length) {
+        while(counter < str1.length || counter < str2.length) {  //search through strings
             if(str1[counter] === str2[counter]) {
                 matched += str1[counter];
                 counter++;
