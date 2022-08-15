@@ -3,7 +3,7 @@
  * @return {number}
  */
  var removeDuplicates = function(nums) {
-    let i = 0;
+    let i = 1;
     for (let j = 1; j < nums.length; j++) { //we are comparing two numbers side by side
         if (nums[j] != nums[i]){ //if 
             i++;
