@@ -9,8 +9,7 @@
         if(nums[j] !== val){                //if the selected element is not val, 
             nums[i] = nums[j];              //we move it to the front of the array and 
             i++;                            //increment what is the "end" of the front array
-        }
-        
+        }    
     }
     return i;
 }
