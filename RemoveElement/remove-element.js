@@ -11,6 +11,5 @@
             i++;                            //increment what is the "end" of the front array
         }    
     }
-    
     return i;
 }
