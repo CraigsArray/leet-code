@@ -4,6 +4,7 @@
  * @param {number} upper
  * @return {string[]}
  */
+ //Note: Works but is messy. Can be refactored to a simpler code.
  var findMissingRanges = function(nums, lower, upper) {
     let missing = [];
     let currLow = lower;
