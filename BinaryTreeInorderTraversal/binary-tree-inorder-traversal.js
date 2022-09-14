@@ -12,18 +12,16 @@
  */
 
  var inorderTraversal = function(root) {
-    var output = []; //container for our nodes to be stores
-    recurseTree(root, output); //pass the container and root into our recursive function
+    let output = [];
+    
+    function recurseTree(curr){
+        if(curr === null) return; //edgecase, null input
+        recurseTree(curr.left);   //Recurse down left subtree 
+        output.push(curr.val)     //Add curr node
+        recurseTree(curr.right);  //Recurse down right subtree
+    
+    }
+    recurseTree(root); 
     return output;
 };
 
-function recurseTree(curr, output){
-    if(curr === null) return []; //edgecase, null input
-    if(curr.left !== null){      //traverse left subtrees first
-        recurseTree(curr.left, output);
-    }
-    output.push(curr.val)        //after left subtree, add curr val
-    if(curr.right !== null){     //traverse right subtrees
-        recurseTree(curr.right, output);
-    }
-}
