@@ -15,7 +15,7 @@
     let output = [];
     
     function recurseTree(curr){
-        if(curr === null) return; //edgecase, null input
+        if(curr === null) return; //node doesn't exist
         recurseTree(curr.left);   //Recurse down left subtree 
         output.push(curr.val)     //Add curr node
         recurseTree(curr.right);  //Recurse down right subtree
