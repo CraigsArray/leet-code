@@ -13,8 +13,7 @@
         }
         tree[j][j] = 1; //last number is always 1
         
-    }
-        
+    }     
     return tree;
     
 };
