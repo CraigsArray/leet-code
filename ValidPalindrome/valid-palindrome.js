@@ -10,7 +10,7 @@ var isPalindrome = function(s) {
     s = s.toLowerCase().replace(/[^a-z0-9]/gi,'');  //could use replace(/[_\W]/g,'') too
     let back = s.length - 1;  //back of string
     let front = 0;            //front of string
-    while(front <= back){
+    while(front < back){
         if(s[front] !== s[back]) return false  //Two finger compare with s[front] and s[back]
         front++;
         back--;
