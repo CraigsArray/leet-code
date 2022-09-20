@@ -23,3 +23,27 @@ Return true if there is a cycle in the linked list. Otherwise, return false.
     }
     return false;
 };
+
+//Add a property
+var hasCycle = function(head) {
+    let map = {};
+    while(head !== null){
+        if(head.seen) return true;
+        head.seen = true;
+        head = head.next;
+    }
+    return false;
+};
+
+//Hash map
+var hasCycle = function(head) {
+    const seen = new Set();
+     
+     while(head) {
+         if(seen.has(head)) return true;  //does hash map have node already?
+         if(!head) return false;    //we reached an end node, no loops
+         seen.add(head);  //add node to hash map
+         head = head.next;
+     }
+     return false;
+ };
