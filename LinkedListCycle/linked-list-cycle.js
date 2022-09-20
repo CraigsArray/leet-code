@@ -26,7 +26,6 @@ Return true if there is a cycle in the linked list. Otherwise, return false.
 
 //Add a property
 var hasCycle = function(head) {
-    let map = {};
     while(head !== null){
         if(head.seen) return true;
         head.seen = true;
