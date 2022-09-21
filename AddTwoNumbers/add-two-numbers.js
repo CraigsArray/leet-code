@@ -35,17 +35,17 @@ var addTwoNumbers = function(l1, l2) {
  var addTwoNumbers = function(l1, l2) {
     if (!l1) return l2; //Best edge cases, if a list is empty, just return the other
     else if (!l2) return l1;
-    let ansHead = l1;
-    let carry = 0;
-    while(l1 !== null){
-        if(!l1.next && l2.next){
+    let ansHead = l1;  //keep the ptr to l1, where we will put our solution
+    let carry = 0;  //when sum > 10
+    while(l1 !== null){  //cycle through till we get to the end of l1
+        if(!l1.next && l2.next){  //if l1 ends before l2, we will add dummy nodes
             l1.next = new ListNode(0);
         }
-        if(l1.next && !l2.next){
+        if(l1.next && !l2.next){  //same with l2
             l2.next = new ListNode(0);
         }
-        var sum = (l1 ? l1.val : 0) + (l2 ? l2.val : 0) + carry;
-        if(sum >= 10){
+        var sum = l1.val + l2.val + carry;  //our sum is the 2 numbers + carry
+        if(sum >= 10){  //when sum > 10, create a carry and change sum properly
             l1.val = sum - 10;
             carry = 1;
         }
@@ -53,17 +53,14 @@ var addTwoNumbers = function(l1, l2) {
             l1.val = sum;
             carry = 0;
         }
-        var tempPtr = l1;
+        var tempPtr = l1;  //holds the tail of l1
         l1 = l1.next;
-        l2 = l2.next;
-        
+        l2 = l2.next;     
     }
-    if(carry){
+    if(carry){  //we ended with a carry, so the last sum was > 10! We need to add a node after the tail and change it's value
         tempPtr.val = sum - 10;
-        let carryNode = new ListNode(1);
+        let carryNode = new ListNode(1);  
         tempPtr.next = carryNode;
-        return ansHead;
-    }
-    
+    }   
     return ansHead;
 };
