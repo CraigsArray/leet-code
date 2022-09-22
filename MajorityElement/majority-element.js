@@ -16,7 +16,7 @@
     }
     let currMax = 0;
     let ans = nums[0];
-    for (let key in map){  //find the key with the largest value
+    for (const key in map){  //find the key with the largest value
        if(map[key] >= currMax){
            currMax = map[key];
            ans = key;
