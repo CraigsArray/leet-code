@@ -1,6 +1,8 @@
 /**
  * @param {number} x
  * @return {boolean}
+ * Given an integer x, return true if x is palindrome integer.
+An integer is a palindrome when it reads the same backward as forward.
  */
 // One for loop means an O(n) runtime however solution is slow as toString() can be very taxing.
 // Summary: Convert number to a string, then have i start as the leftmost number, and j be rightmost number, increment i and decrement j as you move towards the number in the middle

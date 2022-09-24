@@ -1,6 +1,7 @@
 /**
  * @param {string} s
  * @return {number}
+ * Given a roman numeral, convert it to an integer.
  */
  var output = 0;
  var romanToInt = function(s) {
