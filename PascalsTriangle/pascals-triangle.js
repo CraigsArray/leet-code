@@ -11,8 +11,7 @@
             
             tree[j][i] = tree[j-1][i-1] +  tree[j-1][i];    //sum of 2 numbers in previous row     
         }
-        tree[j][j] = 1; //last number is always 1
-        
+        tree[j][j] = 1; //last number is always 1   
     }     
     return tree;
     
