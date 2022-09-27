@@ -23,7 +23,7 @@ Note that read4() has its own file pointer, much like FILE *fp in C.
     return function(buf, n) {
         let buf4 = []  //buf that changes each read
         let readLen  //How much was read
-        while(n>0){  //Still need to read more
+        while(n > 0){  //Still need to read more
           readLen = read4(buf4)  //Read from file, store into buf4, and how much was read into readLen
           buf4.length = Math.min(n, readLen)  //Shorten buf4 if only ready 1-3 chars
           buf.push(...buf4)  //build up buf with read read
