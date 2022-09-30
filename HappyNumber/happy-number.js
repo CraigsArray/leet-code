@@ -18,7 +18,6 @@ Return true if n is a happy number, and false if not.
         for(let i = n.length - 1; i >= 0; i--){ //take each digit, square it, add to sum
             sum += (parseInt(n[i])**2);  
         }
-        
         //Loop exit conditions
         if (sum === 1) return true;  //Happy number
         if(sumSet.has(sum)) return false;  //Ruh roh, we are now in a repeating cycle
