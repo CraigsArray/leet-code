@@ -9,19 +9,21 @@
  * @param {ListNode} head
  * @param {number} val
  * @return {ListNode}
+ 
+   Given the head of a linked list and an integer val, remove all the nodes of the linked list that has Node.val == val, and return the new head.
  */
- var removeElements = function(head, val) {
+   var removeElements = function(head, val) {
     let newHead = head;  //Hold the head location
     while(head !== null){  //Loop through the list
         
-        if(head.val === val){            
-            if(head !== undefined) prev.next = head.next;
-            if(head === newHead) newHead = head.next;                  
+        if(head.val === val){  //Uh-oh. We need to remove this element.          
+            if(head !== undefined) prev.next = head.next;  //to "remove", we have the prev node point past this node to the next
+            if(head === newHead) newHead = head.next;  //But what if we remove the head? We change the new head as well   
         }
         else{
-            prev = head;
+            prev = head;  //we only want to change the previous node when it's "safe". 
         }
-        head = head.next;   
+        head = head.next;   //Go to next item
     }
-    return newHead;
+    return newHead;  //return our list that starts with newHead
 };
