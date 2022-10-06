@@ -15,7 +15,6 @@
  */
    var removeElements = function(head, val) {
     let newHead = head;  //Hold the head location
-
     while(head !== null){  //Loop through the list        
         if(head.val === val){  //Uh-oh. We need to remove this element.          
             if(head !== undefined) prev.next = head.next;  //to "remove", we have the prev node point past this node to the next
