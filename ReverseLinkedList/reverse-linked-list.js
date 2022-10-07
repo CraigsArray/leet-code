@@ -20,6 +20,5 @@
         prev = curr;        //move prev forwards
         curr = tempNext;    //move curr forwards, luckily we saved the pointer
     }
-    return prev;  //curr = null, prev will be at head
-    
+    return prev;  //curr = null, prev will be at head  
 };
