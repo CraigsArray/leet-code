@@ -6,7 +6,9 @@
  * Given two strings s and t, determine if they are isomorphic.
  * Two strings s and t are isomorphic if the characters in s can be replaced to get t.
  * All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.
+ * NOTE: s.length === t.length
  */
+ //Runtime: O(n) - loops through size of string (n) once.
  var isIsomorphic = function(s, t) {
     const sMap = new Map();  //2 maps
     const tMap = new Map();  //no characters can map to the same character
