@@ -28,5 +28,5 @@ function factoryWorks(devices, days){
       if(extraDays < 0) return (k + 1); //k too small, failed. Use prev success.
       else extraDays = days - devices.length; //reset for new k
     }
-    return 1;
+    return -1;
 } 
