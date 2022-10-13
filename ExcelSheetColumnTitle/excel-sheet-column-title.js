@@ -7,15 +7,15 @@
  var convertToTitle = function(columnNumber) {
     let alphabet = "ZABCDEFGHIJKLMNOPQRSTUVWXY";
     let alphaMap = {};
-    for(let i = 0; i < 26; i++){
+    for(let i = 0; i < 26; i++){  //Build an alphabetMap for all the letters
         alphaMap[i] = alphabet[i];
     }
-    let colTitle = "";
+    let colTitle = "";  //Title will be built from right to left
     while(columnNumber > 0){
-        let r = columnNumber % 26;
-        columnNumber = Math.floor(columnNumber / 26);
-        if(r === 0) columnNumber--;
-        colTitle = alphaMap[r] + colTitle;
+        let r = columnNumber % 26;  //First get the remainder
+        columnNumber = Math.floor(columnNumber / 26);  //Numbers are in pseudo-base26, move to next order of magnitude AKA: shift left.
+        if(r === 0) columnNumber--;  //Z will only be the leftmost number. All other occurences of r%26===0 should by Y's
+        colTitle = alphaMap[r] + colTitle;  //Build small to big, right to left.
         
     }
     return colTitle;
