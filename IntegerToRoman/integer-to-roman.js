@@ -13,7 +13,20 @@
  */
  //Runtime O(1);
  //Summary: Just gradually reducing the number. While loops occur when a letter can be repeated
- //Note: Kind of messy, could be cleaned up more
+ var intToRoman = function(num) {
+    let output = "";
+    const map = { M: 1000, CM: 900, D: 500, CD: 400, C: 100, XC: 90, L: 50, XL: 40, X: 10, IX: 9, V: 5, IV: 4, I: 1 };
+    Object.entries(map).forEach(([letter, value]) => {
+        while(num >= value){
+            output += letter;
+            num -= value;
+        }
+    });
+    return output;
+};
+
+ //Long version - less memory
+ /*
  var intToRoman = function(num) {
     let output = "";
     while(num >= 1000){
@@ -70,3 +83,4 @@
     }
     return output;
 };
+*/
