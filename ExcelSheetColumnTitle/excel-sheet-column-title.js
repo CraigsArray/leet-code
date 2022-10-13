@@ -11,7 +11,6 @@
         alphaMap[i] = alphabet[i];
     }
     let colTitle = "";
-    let power = 1;
     while(columnNumber > 0){
         let r = columnNumber % 26;
         columnNumber = Math.floor(columnNumber / 26);
