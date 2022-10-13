@@ -10,9 +10,7 @@
     let subString = "";
     let j = 0;
     
-    for(let j = 0; j < s.length; j++){
-        
-    }
+   
     for(let i = 0; i < s.length; i++){
         if(subString.includes(s[i])){
             map[subString.length] = subString;
