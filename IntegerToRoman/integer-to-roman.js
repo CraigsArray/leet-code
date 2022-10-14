@@ -24,7 +24,6 @@
     });
     return output;
 };
-
  //Long version - less memory
  //While loops occur when a letter can be repeated
  /*
