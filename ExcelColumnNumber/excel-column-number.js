@@ -35,7 +35,7 @@
     }
     let output = 0;
     let power = 0;
-    //Ex: "BY" -> [B] 2*(26^1) + [Y] 25*(26^0). It's a pseudo-base 26 number. Instead of powers of 10, we use powers of 26.
+    //Ex: "BY" (77) -> [B] 2*(26^1) + [Y] 25*(26^0) = 77. It's a pseudo-base 26 number. Instead of powers of 10, we use powers of 26.
     for(let i = columnTitle.length - 1; i >= 0; i--){
         output += map[columnTitle[i]] * (26**power);
         power++;
