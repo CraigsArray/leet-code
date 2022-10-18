@@ -24,8 +24,7 @@
         //right side (for nums[mid -> end])
         //new left is right of center
         node.right = buildTree(nums, mid + 1, right);
-        return node;
-        
+        return node;        
     }
     let left = 0;
     let right = nums.length - 1;
