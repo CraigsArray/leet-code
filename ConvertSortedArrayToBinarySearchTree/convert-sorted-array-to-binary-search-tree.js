@@ -10,7 +10,6 @@
  * @param {number[]} nums
  * @return {TreeNode}
  */
-
  var sortedArrayToBST = function(nums) {
     //Build a tree with 3 pointers, left, right, mid
     var buildTree = function(nums, left, right){  
