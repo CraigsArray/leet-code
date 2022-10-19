@@ -17,13 +17,13 @@
  var isBalanced = function(root) {
     var balanced = true;  //Flag
 
-    var traverse = function(node, depthLeft, depthRight){
-        if(!node) return null;    
+    var traverse = function(node, depthLeft, depthRight){  //DepthFirstSearch
+        if(!node) return null;  //went past a leaf node
         
-        depthLeft = traverse(node.left);
-        depthRight = traverse(node.right);
-        if(Math.abs(depthLeft - depthRight) > 1) balanced = false;
-        return Math.max(depthLeft, depthRight) + 1;
+        depthLeft = traverse(node.left);  //traverse left
+        depthRight = traverse(node.right);  //traverse right
+        if(Math.abs(depthLeft - depthRight) > 1) balanced = false;  //if difference is greater than 1, not balanced
+        return Math.max(depthLeft, depthRight) + 1;  //"depth" here is the height, so leaf nodes start at 0 and then add one each return upwards
         
     }
     traverse(root);
