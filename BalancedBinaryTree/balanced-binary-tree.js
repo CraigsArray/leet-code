@@ -16,7 +16,6 @@
  */
  var isBalanced = function(root) {
     var balanced = true;  //Flag
-
     var traverse = function(node, depthLeft, depthRight){  //DepthFirstSearch
         if(!node) return null;  //went past a leaf node
         
