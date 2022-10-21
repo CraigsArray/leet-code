@@ -23,8 +23,7 @@
         depthLeft = traverse(node.left);  //traverse left
         depthRight = traverse(node.right);  //traverse right
         if(Math.abs(depthLeft - depthRight) > 1) balanced = false;  //if difference is greater than 1, not balanced
-        return Math.max(depthLeft, depthRight) + 1;  //"depth" here is the height, so leaf nodes start at 0 and then add one each return upwards
-        
+        return Math.max(depthLeft, depthRight) + 1;  //"depth" here is the height, so leaf nodes start at 0 and then add one each return upwards        
     }
     traverse(root);
     return balanced;
