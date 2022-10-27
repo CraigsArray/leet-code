@@ -13,12 +13,12 @@
  var invertTree = function(root) {
     
     var traverse = function(node){
-        if(!node) return null;
-        let swapLeft = node.left;
-        let swapRight = node.right;
-        node.left = swapRight;
+        if(!node) return null;  //went past a leaf
+        let swapLeft = node.left;  //temp holds left
+        let swapRight = node.right;  //temp holds right
+        node.left = swapRight;  //make the swap
         node.right = swapLeft;
-        traverse(node.left);
+        traverse(node.left);  //continue down left and right sides of tree
         traverse(node.right);
         
     }
