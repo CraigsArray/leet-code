@@ -21,12 +21,6 @@
 };
 
 
-
-
-
-
-
-
 /*
  var summaryRanges = function(nums) {
     //Algo - Loop through array. If distance to next node is > 1, don't include in current range
