@@ -3,6 +3,7 @@
  * @param {string} b
  * @return {string}
  */
+
  var addBinary = function(a, b) {
     let sum = "";
     let carry = false;
