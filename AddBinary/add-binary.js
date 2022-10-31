@@ -12,7 +12,8 @@
         while(size > a.length) a = "0" + a;
     }
     else while(size > b.length) b = "0" + b; 
-    for(i = size -1; i >= 0; i--){ //start from the right        
+    for(i = size -1; i >= 0; i--){ //start from the right
+        
         if(a[i] === "0" && b[i] ==="0"){ 
             if(carry === true) {
                 sum = "1" + sum;
