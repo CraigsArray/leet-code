@@ -21,7 +21,6 @@ var maxProfit = function(prices) {
     if(maxProfit < 0) return 0; //we only lost money...no profit
     return maxProfit;
 };
-
 /**
  * @param {number[]} prices
  * @return {number}
