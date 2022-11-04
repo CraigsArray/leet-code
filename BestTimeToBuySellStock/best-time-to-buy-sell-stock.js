@@ -7,6 +7,7 @@ You want to maximize your profit by choosing a single day to buy one stock and c
 Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
  */
 //Runtime: O(n)
+
 var maxProfit = function(prices) {
     if(prices.length < 2) return 0;  //edge case...can't profit with only 1 day
     
