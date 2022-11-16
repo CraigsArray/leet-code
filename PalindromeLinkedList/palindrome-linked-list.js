@@ -16,6 +16,7 @@
         vals.push(head.val);
         head = head.next;
     }
+
     let [i, j] = [0, vals.length - 1];
     while(i < j){
         if (vals[i] !== vals[j]) return false;
