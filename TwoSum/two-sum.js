@@ -16,7 +16,6 @@ var twoSum = function(nums, target) {
 //Hash map O(n)
 var twoSumHash = function(nums, target){
     const map = {};
-
     for(let i = 0; i < nums.length; i++){
         const pairedNum = target - nums[i];  //pairedNum is a num where nums[i] + pairedNum = target
                                              //we query our map's keys to see if the number exists already
