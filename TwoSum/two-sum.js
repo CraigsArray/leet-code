@@ -12,6 +12,7 @@ var twoSum = function(nums, target) {
         }
     }
 };
+
 //Hash map O(n)
 var twoSumHash = function(nums, target){
     const map = {};
