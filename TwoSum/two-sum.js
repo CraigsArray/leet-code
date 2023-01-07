@@ -22,5 +22,6 @@ var twoSumHash = function(nums, target){
         if(map[pairedNum] !== null) return [map[pairedNum], i]  //we found pairedNum! Return both indeces
         map[nums[i]] = i;  //we didn't find it. curr number = nums[i]. We save the index, i, in map where key = number                      
     }
+    
     return;
 }
