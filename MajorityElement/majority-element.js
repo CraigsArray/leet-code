@@ -3,7 +3,7 @@
  * @return {number}
  * Given an array nums of size n, return the majority element.
    The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
- */
+*/
 //Solution with hash map. Feel like the end is a bit convoluted but can always revisit.
 //Hash map stores numbers as keys, and their frequence as values
 //Runtime...is O(2n) -> O(n)
