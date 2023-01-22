@@ -9,7 +9,6 @@
         if ((nums[i] !== nums[i - 1]) && (nums[i] !== nums[i + 1])) return nums[i];
     }
 };
-
 //Hash map: O(n)
 var singleNumberHash = function(nums) {
     hash = {}; //New object for our hash table
