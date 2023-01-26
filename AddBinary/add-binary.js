@@ -34,7 +34,6 @@
                 sum = "1" + sum;
                 carry = true;
             }
-            
             else {
                 sum = "0" + sum;
                 carry = true;
