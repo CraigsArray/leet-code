@@ -12,6 +12,7 @@
 //Hash map: O(n)
 var singleNumberHash = function(nums) {
     hash = {}; //New object for our hash table
+
     for(let i = 0; i < nums.length; i++){
         let val = nums[i];  //number
         if(hash[val] !== undefined) delete hash[val];  //if it already exists in table, delete it
