@@ -15,6 +15,6 @@ var isUgly = function(n) {
     while(n % 2 == 0 && n > 2){
         n = n / 2
     }
-    //Check to see if the primes match conditions
+    //Verify the reduced number is still only one of the primes in the conditions
     return (n == 2) || (n == 3) || (n == 5)
 };
