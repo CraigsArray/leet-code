@@ -18,7 +18,6 @@ var singleNumberHash = function(nums) {
         if(hash[val] !== undefined) delete hash[val];  //if it already exists in table, delete it
         else hash[val] = val;  //otherwise add it
     }
-    
     //Only one number will remain, and it lives as the last/only key in hash
     return Object.keys(hash)[0];
 };
