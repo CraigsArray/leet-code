@@ -2,6 +2,7 @@
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */
+//Runtime - O(n) Loops through array once
 var moveZeroes = function(nums) {
     var length = nums.length - 1
     var i = 0
