@@ -17,7 +17,6 @@ NumArray.prototype.sumRange = function(left, right) {
     }
     return sum
 };
-
 /** 
  * Your NumArray object will be instantiated and called as such:
  * var obj = new NumArray(nums)
