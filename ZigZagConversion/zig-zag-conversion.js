@@ -2,6 +2,10 @@
  * @param {string} s
  * @param {number} numRows
  * @return {string}
+ * The string "PAYPALISHIRING" is written in a zigzag pattern on a 
+ * given number of rows like this: (you may want to display this pattern
+ * in a fixed font for better legibility)
+ * Runtime: O(n)
  */
 var convert = function(s, numRows) {
     var output = {};  //Map
