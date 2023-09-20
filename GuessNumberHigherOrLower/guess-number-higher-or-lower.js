@@ -19,10 +19,11 @@ var guessNumber = function(n) {
     var binarySearch = function(curr, left, right){
         //Base Condition
         if(left > right) return false;
-        //Found Answer
-        if(guess(curr) === 0) return curr;
         //New search, new mid
         var curr = Math.floor((left + right)/2);
+        //Found Answer
+        if(guess(curr) === 0) return curr;
+        
         //Too big, change limit on right
         if(guess(curr) === -1) binarySearch(curr, left, curr - 1);
         //Too small, change limit on left
