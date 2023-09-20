@@ -11,27 +11,23 @@
  * @param {number} n
  * @return {number}
  */
-var guessNumber = function(n) {
+ //Binary search with a while loop.
+ //Runtime O(log n)
+ var guessNumber = function(n) {
     var left = 1;
     var right = n;
-    var curr = Math.floor((left + right)/2);
 
-    var binarySearch = function(curr, left, right){
-        //Base Condition
-        if(left > right) return false;
+    while(left <= right){
         //New search, new mid
-        var curr = Math.floor((left + right)/2);
+        var mid = Math.floor(left + (right - left) / 2);
         //Found Answer
-        if(guess(curr) === 0) return curr;
-        
+        if(guess(mid) === 0) return mid;
         //Too big, change limit on right
-        if(guess(curr) === -1) binarySearch(curr, left, curr - 1);
+        else if(guess(mid) === -1) right = mid - 1;
         //Too small, change limit on left
-        if(guess(curr) === 1) binarySearch(curr, curr + 1, right);
- 
-    }
+        else left = mid + 1;
 
-   var output = binarySearch(curr, left, right);
+    }
    return output;
     
 };
