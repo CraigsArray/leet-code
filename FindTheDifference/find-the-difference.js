@@ -14,7 +14,7 @@ Return the letter that was added to t.
 //Runtime: O(n)
 var findTheDifference = function(s, t) {
     var map = {}
-    for(var i = 0; i < s.length + 1; i++){
+    for(var i = 0; i < s.length; i++){
         if(map[s[i]] === undefined) map[s[i]] = 1;
         else{
             map[s[i]]++; //increase quantity
