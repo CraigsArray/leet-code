@@ -20,14 +20,13 @@ var sumOfLeftLeaves = function(root) {
 
     var binaryTraverse = function(node, leftFlag){
         if(node === null) return;
-        if(node.left === null && node.right === null && leftFlag === true){
+        if(node.left === null && node.right === null && leftFlag === true){ //No children = leaf, leftFlag determines it was a left child
             leftLeafSum += node.val;
         }
-        else if(node.left === null && node.right === null) return;
+        if(node.left === null && node.right === null) return;
         binaryTraverse(node.left, true);
         binaryTraverse(node.right, false);
     }
-
     binaryTraverse(root)
     return leftLeafSum;
 
