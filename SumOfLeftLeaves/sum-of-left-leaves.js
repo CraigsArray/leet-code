@@ -29,5 +29,4 @@ var sumOfLeftLeaves = function(root) {
     }
     binaryTraverse(root)
     return leftLeafSum;
-
 };
